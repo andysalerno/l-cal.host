@@ -402,7 +402,7 @@ body {
 
 <p>On Windows, this is accomplished by calling into the WinApi to get the currently running console window handle and invoking <a href="https://docs.microsoft.com/en-us/windows/desktop/api/winuser/nf-winuser-flashwindowex"><code>FlashWindowEx</code></a> on it.</p>
 
-<p>On MacOS, Alert is simply a glorified batch script, because MacOS by default jumps the Terminal icon when it receives the <a href="https://en.wikipedia.org/wiki/Bell_character">BEL character</a>. The Alert executable invokes the command <code>tput bel</code> to do this.</p>
+<p>On MacOS, Alert is simply a glorified shell script, because MacOS by default jumps the Terminal icon when it receives the <a href="https://en.wikipedia.org/wiki/Bell_character">BEL character</a>. The Alert executable invokes the command <code>tput bel</code> to do this.</p>
 
 <p>Alert is <a href="https://github.com/andysalerno/alert">hosted on Github.</a></p>
 

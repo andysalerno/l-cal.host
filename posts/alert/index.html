@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>/dev/null</title>
-  <meta name="description" content="/dev/null">
+  <title>Alert</title>
+  <meta name="description" content="Alert">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -337,10 +337,8 @@ body {
 
   
   
-  <link href="https://andysalerno.com/index.xml" rel="alternate" type="application/rss+xml" title="/dev/null Feed" />
-  
 
-  <meta name="generator" content="Hugo 0.41" />
+  <meta name="generator" content="Hugo 0.42.1" />
 
   
   
@@ -378,39 +376,42 @@ body {
 
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
-	<div class="pure-u-11-12 pure-u-md-2-3">
-	<div class="post-content">
-	
-	  <p class="posts-name">Recent posts:</p>
+  <div class="pure-u-11-12 pure-u-md-2-3">
+    <div class="post">
 
-	  <ul class="posts">
-		
-		
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://andysalerno.com/posts/hello/">Hello</a>
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">07-04-2018</time>
+        
+        
+        
 
-		  <p class="footnote">
-			<time datetime="06-07-2018T23:55:02-07:00">06-07-2018</time>
+        
 
-			
+        
+        </p>
+        <h1>Alert</h1>
+      </div>
 
-			
+      <div class="post-content">
+        <p>Alert is a simple (really, really simple) tool written in Rust that does one thing:</p>
 
-			
+<p>It flashes the command prompt window it is executed in (on Windows), or hops the Terminal dock icon (on MacOS). (Linux version is in progress).</p>
 
-			
+<p>The idea is that if you have some long-running console task, you can just throw Alert at the end to get notified when it&rsquo;s done.</p>
 
-		  </p>
-		</li>
-		
-		
-	  </ul>
-	</div>
-	</div>
+<p>On Windows, this is accomplished by calling into the WinApi to get the currently running console window handle and invoking <a href="https://docs.microsoft.com/en-us/windows/desktop/api/winuser/nf-winuser-flashwindowex"><code>FlashWindowEx</code></a> on it.</p>
+
+<p>On MacOS, Alert is simply a glorified batch script, because MacOS by default jumps the Terminal icon when it receives the <a href="https://en.wikipedia.org/wiki/Bell_character">BEL character</a>. The Alert executable invokes the command <code>tput bel</code> to do this.</p>
+
+<p>Alert is <a href="https://github.com/andysalerno/alert">hosted on Github.</a></p>
+
+<p>Example on MacOS:
+<img src="/images/alert_example_macos.gif" alt="" /></p>
+
+      </div>
+    </div>
+  </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
@@ -432,7 +433,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://andysalerno.com/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
     </div>

@@ -3,14 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andysalerno.com/about/</loc>
-    <lastmod>2018-06-07T23:58:58-07:00</lastmod>
+    <loc>https://andysalerno.com/</loc>
+    <lastmod>2019-11-25T02:18:20-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://andysalerno.com/</loc>
+    <loc>https://andysalerno.com/2019/11/nothing_yet/</loc>
+    <lastmod>2019-11-25T02:18:20-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://andysalerno.com/posts/</loc>
+    <lastmod>2019-11-25T02:18:20-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://andysalerno.com/about/</loc>
     <lastmod>2018-06-07T23:58:58-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

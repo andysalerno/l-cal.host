@@ -2940,8 +2940,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "PingHei", "PingFang SC", Helvetica Neue, "Work Sans",
-    "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-family: Helvetica Neue, "Work Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3258,8 +3257,7 @@ body {
 
 body {
   padding-right: 0 !important;
-  font-family: "PingHei", "PingFang SC", Helvetica Neue, "Work Sans",
-    "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-family: Helvetica Neue, "Work Sans", sans-serif;
   font-size: 14px;
   line-height: 1.57143;
   color: #333333;
@@ -7134,8 +7132,7 @@ body.okayNav-loaded {
   box-sizing: border-box;
   padding: 12px 28px 12px 20px;
   border-bottom: 1px solid #e2e2e2;
-  font-family: "Microsoft Yahei Light", "Microsoft Yahei", Helvetica, Arial,
-    sans-serif;
+  font-family: Helvetica Neue, "Work Sans", sans-serif;
 }
 
 .ins-close {

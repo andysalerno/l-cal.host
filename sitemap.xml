@@ -4,7 +4,14 @@
   
   <url>
     <loc>https://andysalerno.com/</loc>
-    <lastmod>2019-11-25T02:18:20-08:00</lastmod>
+    <lastmod>2019-11-26T11:03:17-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://andysalerno.com/photography/</loc>
+    <lastmod>2019-11-26T11:03:17-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

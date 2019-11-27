@@ -9425,12 +9425,21 @@ body.okayNav-loaded {
   }
 }
 
+.photography_image {
+  align-self: center;
+}
+
 .hugefont {
     font-size:5em;
     text-align: center;
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.photo_container {
+  display: flex;
+  flex-direction: column;
 }
 
 .link_override {

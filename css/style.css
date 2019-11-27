@@ -6521,6 +6521,7 @@ body.no-sidebar .sidebar {
 }
 
 .collection .collection-item {
+  font-size: 2em;
   padding: 8px 0;
   margin: 0;
 }

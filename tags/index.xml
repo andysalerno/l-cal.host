@@ -10,15 +10,6 @@
     
     
     <item>
-      <title>Photography</title>
-      <link>https://andysalerno.com/photography/</link>
-      <pubDate>Tue, 26 Nov 2019 11:03:17 -0800</pubDate>
-      
-      <guid>https://andysalerno.com/photography/</guid>
-      <description>Hello hello.</description>
-    </item>
-    
-    <item>
       <title>Nothing_yet</title>
       <link>https://andysalerno.com/2019/11/nothing_yet/</link>
       <pubDate>Mon, 25 Nov 2019 02:18:20 -0800</pubDate>
@@ -46,6 +37,15 @@ the beatles (white album)
 yellow submarine
 let it be
 abbey road</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://andysalerno.com/photography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andysalerno.com/photography/</guid>
+      <description>  (images go here) </description>
     </item>
     
   </channel>

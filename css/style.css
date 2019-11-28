@@ -1,7 +1,14 @@
+.navbar-left {
+  top: 0;
+  position: sticky;
+  width: 10em;
+}
+
 .master-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .column-container {
@@ -22,8 +29,13 @@
   flex-grow: 1;
 }
 
+.fill-parent {
+  flex-basis: 100%;
+}
+
 .photo-container {
   justify-content: space-between;
+  align-items: center;
 }
 
 .hugefont {
@@ -35,8 +47,8 @@
 }
 
 .photography-image {
-  align-self: center;
   margin: 5em;
+  max-width: 100%;
 }
 
 .link-override {
@@ -53,4 +65,8 @@
 
 .margin12 {
   margin: 12px;
+}
+
+.margin0 {
+  margin: 0px;
 }

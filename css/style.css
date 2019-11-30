@@ -2,7 +2,8 @@
   top: 0;
   position: sticky;
   width: 10em;
-  font-size: 24px;
+  font-size: 18px;
+  padding: 12px;
 }
 
 .master-container {
@@ -22,6 +23,10 @@
   flex-direction: row;
 }
 
+.flex-center-content {
+  justify-content: center;
+}
+
 .noshrink {
   flex-shrink: 0;
 }
@@ -33,7 +38,6 @@
 .fill-parent {
   flex-basis: 100%;
 }
-
 
 .hugefont {
     font-size:5em;
@@ -72,4 +76,8 @@
 
 .margin0 {
   margin: 0px;
+}
+
+.max-width {
+  max-width: 130px;
 }

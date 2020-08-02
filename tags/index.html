@@ -1,81 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    andy salerno</title>
+<html lang="en-us">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no,email=no,adress=no">
-  <meta name="theme-color" content="#000000" />
-  <meta http-equiv="window-target" content="_top" /><title>andy salerno</title>
-
-  <link rel="alternate" type="application/rss+xml" href="https://andysalerno.com/tags/index.xml" title="andy salerno" />
-  <script src="/static/lazy.js"></script>
-  <link rel="stylesheet" href="https://andysalerno.com/css/style.css">
-
-</head>
-</head>
-
-<body class="margin0">
-  <div class="master-container"><header class="navbar-left">
-  <nav>
-    <ul>
-      <li>
-        <a href="/">
-          <span class="menu-title">Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="/posts">
-          <span class="menu-title">Writings</span>
-        </a>
-      </li>
-      <li>
-        <a href="/photography">
-          <span class="menu-title">Street photography</span>
-        </a>
-      </li>
-      <li>
-        <a href="/tags">
-          <span class="menu-title">Tags</span>
-        </a>
-      </li>
-      <li>
-        <a href="/about">
-          <span class="menu-title">About</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-    <div class="grow max-width"></div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-<main class="main" role="main">
-    <article class="article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">Tags</h1>
-            <p class="text-muted hidden-xs">Total 0 tags</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="https://andysalerno.com/tags">All</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <div class="article-body">
-        </div>
-    </article>
-</main>
-  </div>
-</body>
+    <title>Tags - Blog</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="https://andysalerno.com/an-old-hope.min.css" rel="stylesheet">
+    <link href="https://andysalerno.com/style.css" rel="stylesheet">
+    <link href="https://andysalerno.com/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://andysalerno.com/apple-touch-icon.png">
+    <link rel="icon" href="https://andysalerno.com/favicon.ico">
+    <meta name="generator" content="Hugo 0.73.0" />
+    
+    <link rel="alternate" type="application/rss+xml" href="https://andysalerno.com/tags/index.xml" title="Blog" />
+    
+    
+    <script>
+      function setTheme() {
+        const time = new Date();
 
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then(res => res.json())
+            .then(data => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="list">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="https://andysalerno.com/">Blog</a></p>
+      </nav>
+    </header>
+    <main class="main">
+
+<header class="page-header"><h1>Tags</h1></header>
+</main>
+<footer class="footer">
+  <span>&copy; 2020 <a href="https://andysalerno.com/">Blog</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="https://andysalerno.com/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
 </html>
+

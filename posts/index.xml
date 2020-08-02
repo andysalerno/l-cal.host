@@ -1,57 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on andy salerno</title>
+    <title>Posts on Blog</title>
     <link>https://andysalerno.com/posts/</link>
-    <description>Recent content in Posts on andy salerno</description>
+    <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 25 Nov 2019 02:18:20 -0800</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Aug 2020 12:30:06 -0700</lastBuildDate>
     
-        <atom:link href="https://andysalerno.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://andysalerno.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Nothing_yet</title>
-      <link>https://andysalerno.com/2019/11/nothing_yet/</link>
-      <pubDate>Mon, 25 Nov 2019 02:18:20 -0800</pubDate>
-      
-      <guid>https://andysalerno.com/2019/11/nothing_yet/</guid>
-      <description>The Tragedy of Macbeth Shakespeare homepage | Macbeth | Entire play ACT I SCENE I. A desert place.
-Thunder and lightning. Enter three Witches  First Witch
-When shall we three meet again In thunder, lightning, or in rain?  Second Witch
-When the hurlyburly&#39;s done, When the battle&#39;s lost and won.  Third Witch
-That will be ere the set of sun.  First Witch
-Where the place?  Second Witch</description>
-    </item>
     
     <item>
-      <title>About</title>
-      <link>https://andysalerno.com/about/</link>
-      <pubDate>Thu, 07 Jun 2018 23:58:58 -0700</pubDate>
+      <title>First</title>
+      <link>https://andysalerno.com/posts/first/</link>
+      <pubDate>Sun, 02 Aug 2020 12:30:06 -0700</pubDate>
       
-      <guid>https://andysalerno.com/about/</guid>
-      <description>please please me
-with the beatles
-a hard day&amp;rsquo;s night
-beatles for sale
-help!
-rubber soul
-revolver
-sgt. pepper&amp;rsquo;s lonely hearts club band
-magical mystery tour
-the beatles (white album)
-yellow submarine
-let it be
-abbey road</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://andysalerno.com/photography/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://andysalerno.com/photography/</guid>
-      <description></description>
+      <guid>https://andysalerno.com/posts/first/</guid>
+      <description>Hello, world. This is just a test.
+How&amp;rsquo;s it going?</description>
     </item>
     
   </channel>

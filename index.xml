@@ -6,10 +6,22 @@
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2020 12:30:06 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 15:48:23 -0700</lastBuildDate>
     
 	<atom:link href="https://andysalerno.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to create a Hugo-based markdown blog</title>
+      <link>https://andysalerno.com/posts/another-one/</link>
+      <pubDate>Sun, 02 Aug 2020 15:48:23 -0700</pubDate>
+      
+      <guid>https://andysalerno.com/posts/another-one/</guid>
+      <description>Step 1: The spark ignites Oooh, look at this cool person&amp;rsquo;s blog post that was posted on Hacker News&amp;hellip; Why don&amp;rsquo;t I have cool, minimal blog like this?
+Step 2: Pick your theme Spend two hours browsing minimal Hugo themes until you find one that&amp;rsquo;s simple yet functional.
+Step 3: Simplify Why does this &amp;ldquo;simple&amp;rdquo; theme include google analytics and disqus?
+I should gut it of all the stuff I don&amp;rsquo;t need&amp;hellip;</description>
+    </item>
     
     <item>
       <title>First</title>

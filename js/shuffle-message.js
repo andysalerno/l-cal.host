@@ -35,11 +35,11 @@ function typeRandomTagline() {
 
     div.innerHTML += ' / ';
 
-    charArray.forEach((s, i) => {
+    for (let i = 0; i < selectedTagLine.length; i++) {
         setTimeout(() => {
-            div.innerHTML += s.toString();
+            div.innerHTML = ' / ' + selectedTagLine.substring(0, i + 1);
         }, i * 60);
-    });
+    }
 }
 
 function getRndInteger(min, max) {

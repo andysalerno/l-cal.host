@@ -101,6 +101,42 @@
     </div>
 </div>
 
+<div id="modal" class="modal">
+
+    
+    
+
+    
+    <img class="modal-content" id="modal-img" onclick="closeModal()">
+
+    
+    
+</div>
+
+<script>
+
+    function closeModal() {
+        let modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+    document.onkeydown = function () {
+        closeModal();
+    };
+
+    function clickToEnlarge(imgId) {
+        
+        let modal = document.getElementById("modal");
+
+        
+        let img = document.getElementById(imgId);
+        let modalImg = document.getElementById("modal-img");
+
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+</script>
+
 <div class="content">
     <div class="container">
         <div class="row justify-content-center">

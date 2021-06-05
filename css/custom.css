@@ -27,10 +27,10 @@
     margin-right: auto;
     display: block;
     max-width: max-content; */
-    max-width: max-content;
+    max-width: 100%;
     max-height: max-content;
-    width: auto;
-    height: auto;
+    width: max-content;
+    height: max-content;
     position: absolute;
     top: 0;
     bottom: 0;

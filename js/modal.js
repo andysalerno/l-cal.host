@@ -17,6 +17,8 @@ function closeModal() {
     window.location.hash = '';
 }
 
+// Left and right arrow keys scrub through the gallery.
+// Everything else closes the modal.
 document.onkeydown = function (e) {
     if (e.keyCode === 37) {
         // Left arrow
@@ -27,10 +29,7 @@ document.onkeydown = function (e) {
 
     } else if (e.keyCode === 39) {
         // Right arrow
-        const index = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
-        if (index !== enlargedImgIndex) {
-            enlargeImgWithIndex(index);
-        }
+        advanceNextImage();
     } else {
         closeModal();
     }
@@ -50,8 +49,9 @@ function enlargeImgWithIndex(index) {
 }
 
 function advanceNextImage() {
-    if (enlargedImgIndex !== undefined) {
-        enlargeImgWithIndex(enlargedImgIndex + 1);
+    const nextIndex = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
+    if (nextIndex !== enlargedImgIndex) {
+        enlargeImgWithIndex(nextIndex);
     }
 }
 
@@ -74,14 +74,15 @@ function showImageFromUrlHash() {
     if (window.location.hash.length > 1) {
         const i = parseInt(window.location.hash.substr(1));
         enlargeImgWithIndex(i);
+    } else {
+        closeModal();
     }
-
 }
 
 window.addEventListener("load", function () {
     showImageFromUrlHash();
 });
 
-window.addEventListener('popstate', function (event) {
+window.onhashchange = function () {
     showImageFromUrlHash();
-});
+}

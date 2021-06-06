@@ -21,12 +21,16 @@ document.onkeydown = function (e) {
     if (e.keyCode === 37) {
         // Left arrow
         const index = Math.max(0, enlargedImgIndex - 1);
-        enlargeImgWithIndex(index);
+        if (index !== enlargedImgIndex) {
+            enlargeImgWithIndex(index);
+        }
 
     } else if (e.keyCode === 39) {
         // Right arrow
         const index = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
-        enlargeImgWithIndex(index);
+        if (index !== enlargedImgIndex) {
+            enlargeImgWithIndex(index);
+        }
     } else {
         closeModal();
     }
@@ -45,6 +49,12 @@ function enlargeImgWithIndex(index) {
     window.location.hash = index;
 }
 
+function advanceNextImage() {
+    if (enlargedImgIndex !== undefined) {
+        enlargeImgWithIndex(enlargedImgIndex + 1);
+    }
+}
+
 function enlarge(img) {
     // Get the modal
     let modal = document.getElementById("myModal");
@@ -60,9 +70,18 @@ function enlarge(img) {
     enlarged = img;
 }
 
-window.addEventListener("load", function () {
+function showImageFromUrlHash() {
     if (window.location.hash.length > 1) {
         const i = parseInt(window.location.hash.substr(1));
         enlargeImgWithIndex(i);
     }
+
+}
+
+window.addEventListener("load", function () {
+    showImageFromUrlHash();
+});
+
+window.addEventListener('popstate', function (event) {
+    showImageFromUrlHash();
 });

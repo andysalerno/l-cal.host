@@ -6,12 +6,11 @@ const tagLines = [
     'Beatle person',
     'Prone to rambling',
     'Long time reader first time blogger',
-    'Shameless procrastinator',
     'Talks while muted',
-    'Seeking validation',
     'Pronounces it "jiff"',
     'Night owl',
-    'Probably humming somewhere'
+    'Probably humming somewhere',
+    'Just married!'
 ];
 
 function setRandomTagline() {

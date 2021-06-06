@@ -22,11 +22,7 @@ function closeModal() {
 document.onkeydown = function (e) {
     if (e.keyCode === 37) {
         // Left arrow
-        const index = Math.max(0, enlargedImgIndex - 1);
-        if (index !== enlargedImgIndex) {
-            enlargeImgWithIndex(index);
-        }
-
+        goBackPrevImage();
     } else if (e.keyCode === 39) {
         // Right arrow
         advanceNextImage();
@@ -52,6 +48,13 @@ function advanceNextImage() {
     const nextIndex = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
     if (nextIndex !== enlargedImgIndex) {
         enlargeImgWithIndex(nextIndex);
+    }
+}
+
+function goBackPrevImage() {
+    const index = Math.max(0, enlargedImgIndex - 1);
+    if (index !== enlargedImgIndex) {
+        enlargeImgWithIndex(index);
     }
 }
 

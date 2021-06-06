@@ -57,6 +57,18 @@
     align-self: center;
     flex-grow: 0.1;
   }
+
+  .img-row-arrow-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: center;
+    flex-grow: 0.1;
+  }
+
+  .flex-pusher {
+      flex: 1;
+  }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
   #caption {

@@ -108,10 +108,11 @@
     </div>
 </div>
 
-<div id="modal" class="modal" onclick="closeModal()">
-    <i class="modal-content" id="modal-count">Click to view</i>
+<div id="myModal" class="myModal" onclick="closeModal()">
+    <i class="myModal-content caption" id="modal-count">Click to view</i>
     
-    <img class="modal-content" id="modal-img" onclick="closeModal()">
+    <img class="myModal-content" id="modal-img" onclick="closeModal()">
+    <i class="myModal-content caption" id="modal-caption">caption</i>
 </div>
 
 <script>
@@ -130,7 +131,7 @@
     }
 
     function closeModal() {
-        let modal = document.getElementById("modal");
+        let modal = document.getElementById("myModal");
         modal.style.display = "none";
     }
 
@@ -162,12 +163,12 @@
 
     function enlarge(img) {
         
-        let modal = document.getElementById("modal");
+        let modal = document.getElementById("myModal");
 
         
         let modalImg = document.getElementById("modal-img");
 
-        modal.style.display = "block";
+        modal.style.display = "flex";
         modalImg.src = img.src;
         enlarged = img;
     }
@@ -189,7 +190,7 @@
 <figure>
     
     
-    <img class="photo glowy-photo" id="img0" src="/photogallery/51211523268_0b8535bb5d_b.jpg"
+    <img class="photo glowy-photo" id="img0" src="/photogallery/large/51228055851.jpg"
         onclick="enlargeImgWithIndex( 0 )">
     <i class="lowOpacity">Click to view</i>
 </figure>
@@ -198,7 +199,7 @@
 <figure>
     
     
-    <img class="photo glowy-photo" id="img1" src="/photogallery/51210597357_8d8fc40005_c.jpg"
+    <img class="photo glowy-photo" id="img1" src="/photogallery/large/51228045981.jpg"
         onclick="enlargeImgWithIndex( 1 )">
     <i class="lowOpacity">Click to view</i>
 </figure>
@@ -209,7 +210,7 @@
 <figure>
     
     
-    <img class="photo glowy-photo" id="img2" src="/photogallery/51210605557_60458fd833_c.jpg"
+    <img class="photo glowy-photo" id="img2" src="/photogallery/large/51228055851.jpg"
         onclick="enlargeImgWithIndex( 2 )">
     <i class="lowOpacity">Click to view</i>
 </figure>
@@ -218,19 +219,11 @@
 <figure>
     
     
-    <img class="photo glowy-photo" id="img3" src="/photogallery/51210605942_644c586324_c.jpg"
+    <img class="photo glowy-photo" id="img3" src="/photogallery/large/51228045981.jpg"
         onclick="enlargeImgWithIndex( 3 )">
     <i class="lowOpacity">Click to view</i>
 </figure>
 <p>One thing I&rsquo;m not sold on yet is the optical viewfinder.  As much as I try to force myself to use it, the real-time feedback provided by the EVF is simply too convenient to pass up.  With the EVF, there&rsquo;s no doubt if you&rsquo;re missing focus, or over/under exposed.  And despite the build quality of the camear, I&rsquo;m concerned about the longevity of the motor that raises and lowers the EVF.  Hopefully it is rated to last nearly as long as the shutter.</p>
-
-<figure>
-    
-    
-    <img class="photo glowy-photo" id="img4" src="/photogallery/51211315181_87b00971b0_c.jpg"
-        onclick="enlargeImgWithIndex( 4 )">
-    <i class="lowOpacity">Click to view</i>
-</figure>
 <p>Despite the challenges posed by 2020, it was still an interesting year to be a hobbyist street photographer, because you could document a society-wide change in behavior that, in our lifetimes, we&rsquo;ve never seen before, and likely won&rsquo;t see again.  That being said, hopefully the remainder of 2021 also brings a society-wide shift back to normality at whatever pace is responsible.  Imagine the photos.</p>
 
 

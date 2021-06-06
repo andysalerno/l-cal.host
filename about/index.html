@@ -108,10 +108,11 @@
     </div>
 </div>
 
-<div id="modal" class="modal" onclick="closeModal()">
-    <i class="modal-content" id="modal-count">Click to view</i>
+<div id="myModal" class="myModal" onclick="closeModal()">
+    <i class="myModal-content caption" id="modal-count">Click to view</i>
     
-    <img class="modal-content" id="modal-img" onclick="closeModal()">
+    <img class="myModal-content" id="modal-img" onclick="closeModal()">
+    <i class="myModal-content caption" id="modal-caption">caption</i>
 </div>
 
 <script>
@@ -130,7 +131,7 @@
     }
 
     function closeModal() {
-        let modal = document.getElementById("modal");
+        let modal = document.getElementById("myModal");
         modal.style.display = "none";
     }
 
@@ -162,12 +163,12 @@
 
     function enlarge(img) {
         
-        let modal = document.getElementById("modal");
+        let modal = document.getElementById("myModal");
 
         
         let modalImg = document.getElementById("modal-img");
 
-        modal.style.display = "block";
+        modal.style.display = "flex";
         modalImg.src = img.src;
         enlarged = img;
     }

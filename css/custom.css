@@ -1,11 +1,11 @@
 /* Begin Lightbox */
  /* Style the Image Used to Trigger the Modal */
- .photo {
+ .glowy-photo {
     cursor: pointer;
     transition: 0.1s;
   }
   
-  .photo:hover {opacity: 0.7;}
+  .glowy-photo:hover {opacity: 0.7;}
   
   /* The Modal (background) */
   .modal {
@@ -75,6 +75,18 @@
     }
   } 
 /* End Lightbox */
+
+/* Flex container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 256px;
+    margin: 3px;
+}
 
 
 /* Global styles */

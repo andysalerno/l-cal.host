@@ -109,22 +109,58 @@
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
+    <i class="modal-content" id="modal-count">Click to view</i>
     
     <img class="modal-content" id="modal-img" onclick="closeModal()">
 </div>
 
 <script>
 
+    
+    let enlargedImgIndex = 0;
+
+    let _imgsCount;
+    function imgsCount() {
+        if (_imgsCount === undefined) {
+            const images = document.getElementsByClassName("photo");
+            _imgsCount = images.length;
+        }
+
+        return _imgsCount;
+    }
+
     function closeModal() {
         let modal = document.getElementById("modal");
         modal.style.display = "none";
     }
 
-    document.onkeydown = function () {
-        closeModal();
+    document.onkeydown = function (e) {
+        if (e.keyCode === 37) {
+            
+            const index = Math.max(0, enlargedImgIndex - 1);
+            enlargeImgWithIndex(index);
+
+        } else if (e.keyCode === 39) {
+            
+            const index = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
+            enlargeImgWithIndex(index);
+        } else {
+            closeModal();
+        }
     };
 
-    function clickToEnlarge(img) {
+    function enlargeImgWithIndex(index) {
+        enlargedImgIndex = index;
+        const images = document.getElementsByClassName("photo");
+        const img = images[index];
+
+        const modalCountDisplay = document.getElementById("modal-count");
+        modalCountDisplay.innerText = (index + 1) + "/" + images.length;
+
+        enlarge(img);
+    }
+
+    function enlarge(img) {
         
         let modal = document.getElementById("modal");
 
@@ -133,6 +169,7 @@
 
         modal.style.display = "block";
         modalImg.src = img.src;
+        enlarged = img;
     }
 </script>
 

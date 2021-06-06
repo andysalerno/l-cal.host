@@ -109,22 +109,58 @@
 </div>
 
 <div id="modal" class="modal" onclick="closeModal()">
+    <i class="modal-content" id="modal-count">Click to view</i>
     
     <img class="modal-content" id="modal-img" onclick="closeModal()">
 </div>
 
 <script>
 
+    
+    let enlargedImgIndex = 0;
+
+    let _imgsCount;
+    function imgsCount() {
+        if (_imgsCount === undefined) {
+            const images = document.getElementsByClassName("photo");
+            _imgsCount = images.length;
+        }
+
+        return _imgsCount;
+    }
+
     function closeModal() {
         let modal = document.getElementById("modal");
         modal.style.display = "none";
     }
 
-    document.onkeydown = function () {
-        closeModal();
+    document.onkeydown = function (e) {
+        if (e.keyCode === 37) {
+            
+            const index = Math.max(0, enlargedImgIndex - 1);
+            enlargeImgWithIndex(index);
+
+        } else if (e.keyCode === 39) {
+            
+            const index = Math.min(imgsCount() - 1, enlargedImgIndex + 1);
+            enlargeImgWithIndex(index);
+        } else {
+            closeModal();
+        }
     };
 
-    function clickToEnlarge(img) {
+    function enlargeImgWithIndex(index) {
+        enlargedImgIndex = index;
+        const images = document.getElementsByClassName("photo");
+        const img = images[index];
+
+        const modalCountDisplay = document.getElementById("modal-count");
+        modalCountDisplay.innerText = (index + 1) + "/" + images.length;
+
+        enlarge(img);
+    }
+
+    function enlarge(img) {
         
         let modal = document.getElementById("modal");
 
@@ -133,6 +169,7 @@
 
         modal.style.display = "block";
         modalImg.src = img.src;
+        enlarged = img;
     }
 </script>
 
@@ -148,39 +185,56 @@
             <div class="markdown flex-container">
 
                 
-                <img class="gallery-image" src="/photogallery/51210591457_d0004e62a2_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51210591457_d0004e62a2_c.jpg"
+                    onclick="enlargeImgWithIndex( 0 )">
                 
-                <img class="gallery-image" src="/photogallery/51210597357_8d8fc40005_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51210597357_8d8fc40005_c.jpg"
+                    onclick="enlargeImgWithIndex( 1 )">
                 
-                <img class="gallery-image" src="/photogallery/51210605557_60458fd833_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51210605557_60458fd833_c.jpg"
+                    onclick="enlargeImgWithIndex( 2 )">
                 
-                <img class="gallery-image" src="/photogallery/51210605942_644c586324_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51210605942_644c586324_c.jpg"
+                    onclick="enlargeImgWithIndex( 3 )">
                 
-                <img class="gallery-image" src="/photogallery/51211302711_e18d2f1045_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211302711_e18d2f1045_c.jpg"
+                    onclick="enlargeImgWithIndex( 4 )">
                 
-                <img class="gallery-image" src="/photogallery/51211303256_7734796b3a_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211303256_7734796b3a_c.jpg"
+                    onclick="enlargeImgWithIndex( 5 )">
                 
-                <img class="gallery-image" src="/photogallery/51211305241_972b0dab3d_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211305241_972b0dab3d_c.jpg"
+                    onclick="enlargeImgWithIndex( 6 )">
                 
-                <img class="gallery-image" src="/photogallery/51211310941_1ecabbae04_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211310941_1ecabbae04_c.jpg"
+                    onclick="enlargeImgWithIndex( 7 )">
                 
-                <img class="gallery-image" src="/photogallery/51211311676_57c0339ce4_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211311676_57c0339ce4_c.jpg"
+                    onclick="enlargeImgWithIndex( 8 )">
                 
-                <img class="gallery-image" src="/photogallery/51211312656_ebf82a0561_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211312656_ebf82a0561_c.jpg"
+                    onclick="enlargeImgWithIndex( 9 )">
                 
-                <img class="gallery-image" src="/photogallery/51211314851_8d3e65ce40_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211314851_8d3e65ce40_c.jpg"
+                    onclick="enlargeImgWithIndex( 10 )">
                 
-                <img class="gallery-image" src="/photogallery/51211315181_87b00971b0_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211315181_87b00971b0_c.jpg"
+                    onclick="enlargeImgWithIndex( 11 )">
                 
-                <img class="gallery-image" src="/photogallery/51211523268_0b8535bb5d_b.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211523268_0b8535bb5d_b.jpg"
+                    onclick="enlargeImgWithIndex( 12 )">
                 
-                <img class="gallery-image" src="/photogallery/51211523268_0b8535bb5d_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51211523268_0b8535bb5d_c.jpg"
+                    onclick="enlargeImgWithIndex( 13 )">
                 
-                <img class="gallery-image" src="/photogallery/51212070649_5984cb84f8_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51212070649_5984cb84f8_c.jpg"
+                    onclick="enlargeImgWithIndex( 14 )">
                 
-                <img class="gallery-image" src="/photogallery/51212379195_b9f2a6ed54_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51212379195_b9f2a6ed54_c.jpg"
+                    onclick="enlargeImgWithIndex( 15 )">
                 
-                <img class="gallery-image" src="/photogallery/51212382190_2741507003_c.jpg" onclick="clickToEnlarge(this)">
+                <img class="gallery-image photo glowy-photo" src="/photogallery/51212382190_2741507003_c.jpg"
+                    onclick="enlargeImgWithIndex( 16 )">
                 
             </div>
         </div>

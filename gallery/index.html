@@ -111,7 +111,11 @@
 <div id="myModal" class="myModal">
     <i class=" myModal-content caption" id="modal-count">Click to view</i>
     
-    <img class="myModal-content" id="modal-img" onclick="advanceNextImage()">
+    <div class="img-row">
+        <div id="leftArrow" class="myModal-content caption img-row-arrow">&lt;</div>
+        <img class="myModal-content" id="modal-img" onclick="advanceNextImage()">
+        <div id="rightArrow" class="myModal-content caption img-row-arrow">&gt;</div>
+    </div>
     <i class="myModal-content caption" id="modal-caption">&lt; &gt;</i>
 </div>
 

@@ -30,31 +30,15 @@
 
   .myModal-content.caption {
       flex-grow: 0;
+      color:rgb(199, 199, 199);
+      text-align: center;
   }
   
   /* Modal Content (Image) */
   img.myModal-content {
-    flex: 1;
+    flex-shrink: 0;
     min-height: 0;
     object-fit: contain;
-    /* max-width: 100%; */
-    /* max-height: max-content; */
-    /* max-height: 100vh; */
-    /* width: max-content; */
-    /* object-fit: contain; */
-    /* margin: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0; */
-    /* position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; */
-    /* background-color: rgb(0,0,0); /* Fallback color */
-    /* background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */

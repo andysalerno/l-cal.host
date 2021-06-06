@@ -112,7 +112,7 @@
     <i class="myModal-content caption" id="modal-count">Click to view</i>
     
     <img class="myModal-content" id="modal-img" onclick="closeModal()">
-    <i class="myModal-content caption" id="modal-caption">caption</i>
+    <i class="myModal-content caption" id="modal-caption">&lt; &gt;</i>
 </div>
 
 <script>
@@ -168,8 +168,11 @@
         
         let modalImg = document.getElementById("modal-img");
 
+        const largeSrc = img.src.replace('/tiny/', '/large/');
+
         modal.style.display = "flex";
-        modalImg.src = img.src;
+        modalImg.src = '';
+        modalImg.src = largeSrc;
         enlarged = img;
     }
 </script>

@@ -37,6 +37,7 @@
   .flex-row {
       display: flex;
       flex-direction: row;
+      justify-content: center;
   }
 
   .img-row {
@@ -58,6 +59,7 @@
   }
 
   .img-row-arrow {
+    font-size: 3vw;
     align-self: center;
     width: 100%;
     flex-grow: 0;

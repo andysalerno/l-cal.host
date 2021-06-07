@@ -28,14 +28,18 @@
       flex: 1;
   }
 
-  .myModal-content.caption {
+  /* .myModal-content.caption { */
+  .caption {
       color:rgb(199, 199, 199);
       text-align: center;
   }
 
-  .img-row {
+  .flex-row {
       display: flex;
       flex-direction: row;
+  }
+
+  .img-row {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -55,7 +59,8 @@
 
   .img-row-arrow {
     align-self: center;
-    flex-grow: 0.1;
+    width: 100%;
+    flex-grow: 0;
   }
 
   .img-row-arrow-col {
@@ -69,9 +74,20 @@
   .flex-pusher {
       flex: 1;
   }
+
+  .flex-pusher-08 {
+      flex-grow: 0.8;
+  }
+  
+  /* The Close Button */
+  .close-button {
+      flex-grow: 0.2;
+      font-family: sans-serif;
+      font-size: 3vw;
+  }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
+  /* #caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -80,18 +96,7 @@
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
+  } */
   
   .close:hover,
   .close:focus {

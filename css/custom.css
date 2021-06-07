@@ -59,6 +59,7 @@
   }
 
   .img-row-arrow {
+    cursor: pointer;
     font-size: 3vw;
     align-self: center;
     width: 100%;
@@ -66,6 +67,7 @@
   }
 
   .img-row-arrow-col {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 100%;

@@ -42,6 +42,27 @@ function enlargeImgWithIndex(index) {
     enlarge(img);
 
     window.location.hash = index;
+
+    // Pre-load next two images while we're at it.
+    preloadImgWithIndex(index + 1);
+    preloadImgWithIndex(index + 2);
+}
+
+function preloadImgWithIndex(index) {
+    if (index < 0 || index >= imgsCount()) {
+        return;
+    }
+
+    const images = document.getElementsByClassName("photo");
+    const img = images[index];
+
+    const largeSrc = img.src.replace('/tiny/', '/large/');
+
+    const preloadLink = document.createElement("link");
+    preloadLink.href = largeSrc;
+    preloadLink.rel = "preload";
+    preloadLink.as = "image";
+    document.head.appendChild(preloadLink);
 }
 
 function advanceNextImage() {
@@ -89,3 +110,7 @@ window.addEventListener("load", function () {
 window.onhashchange = function () {
     showImageFromUrlHash();
 }
+
+window.addEventListener("load", function () {
+    preloadImgWithIndex(0);
+});

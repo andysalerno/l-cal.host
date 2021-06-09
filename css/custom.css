@@ -125,10 +125,10 @@
 }
 
 .gallery-image {
-    width: 256px;
+    max-height: 171px;
+    max-width: 256px;
     margin: 3px;
 }
-
 
 /* Global styles */
 

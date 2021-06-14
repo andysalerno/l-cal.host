@@ -6,7 +6,19 @@
     <description>Recent content in Posts on ⌨️🤷🏻‍♂️📷</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 May 2021 21:57:56 -0700</lastBuildDate><atom:link href="https://andysalerno.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jun 2021 09:44:14 -0700</lastBuildDate><atom:link href="https://andysalerno.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bear plus snowflake equals polar bear</title>
+      <link>https://andysalerno.com/posts/weird-emojis/</link>
+      <pubDate>Sun, 13 Jun 2021 09:44:14 -0700</pubDate>
+      
+      <guid>https://andysalerno.com/posts/weird-emojis/</guid>
+      <description>Prelude: e and e Quick, how many bytes make up the following line? No tricks, I promise.
+Hello! The correct answer is: 6. Or 7, if you want to be pedantic and include the newline, but let&amp;rsquo;s not.
+This is simple enough; this page is encoded as UTF-8, which implies 8-bits per ASCII character, or a byte per character.
+Let&amp;rsquo;s play again. How many bytes make up the following line?</description>
+    </item>
+    
     <item>
       <title>📷 First time out with the XPro 3</title>
       <link>https://andysalerno.com/posts/xpro3-first-day/</link>

@@ -162,7 +162,6 @@ $ 7
 $ 9
 </code></pre><p>Huh??  Where&rsquo;d that extra byte come from?  Well, the truth is, there&rsquo;s an <em>imposter</em> in that line.</p>
 <p>That&rsquo;s right, it was the ol' UTF-8 Cryillic &lsquo;е&rsquo; trick.  No one ever expects <a href="https://util.unicode.org/UnicodeJsps/character.jsp?a=0435">U+0435</a>.  If it&rsquo;s your first time encountering this, a brief explanation: yes, UTF-8 is one-byte-per-character for the first 128 characters, correlating perfectly to traditional ASCII.  But the full Unicode standard, which UTF-8 encodes, includes <a href="https://unicode.org/versions/Unicode13.0.0/">143,859 characters</a> as of version 13.0.  To represent the full spectrum, UTF-8 must use multiple bytes for some characters (technically, <em>most</em> characters).  It just so happens that this vast range of characters includes some look-alikes, like your friendly neighborhood 1-byte ASCII &ldquo;e&rdquo; and your less-loved but still friendly 2-byte Cryillic &ldquo;е&rdquo;.</p>
-<p>The Unicode website even shows you a handy little section called &ldquo;confuse&rdquo; that lists some of the</p>
 <p>UTF-8 uses one to four bytes to encode each Unicode code point.</p>
 <h4 id="enter-emojis">Enter: emojis</h4>
 <p>Round two.  How many bytes in the following line?</p>
@@ -355,6 +354,7 @@ Total: 35 bytes
 
 <p>Of course, if your goal was to use the most amount of data in a single tweet, you would probably upload a video.</p>
 <p>But as a software developer, it&rsquo;s always fun to think about edge cases, and squeezing almost 5KB into a 280-&ldquo;character&rdquo; tweet is fun 🙂</p>
+<p><em>I did my best to be factual and accurate, but if you noticed any errors, email me at andysalerno at gmail dotcom, or file a Github issue at <a href="https://github.com/andysalerno/andysalerno.com">https://github.com/andysalerno/andysalerno.com</a></em></p>
 
 
 

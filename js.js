@@ -1,7 +1,9 @@
 function f() {
 
     let hidden = document.getElementsByClassName("hidden")[0];
-    hidden.remove();
+    if (hidden) {
+        hidden.remove();
+    }
 
     let blinkits = document.getElementsByClassName("blinkit");
     let count = blinkits.length;
@@ -14,8 +16,8 @@ function f() {
 
 function blinker(element) {
     const interval = 97;
-    const probabilityWeight = 20;
-    const minIntervals = 3;
+    const probabilityWeight = 28;
+    const minIntervals = 4;
 
     let curIntervals = 0;
 

@@ -1,4 +1,8 @@
 function f() {
+
+    let hidden = document.getElementsByClassName("hidden")[0];
+    hidden.remove();
+
     let blinkits = document.getElementsByClassName("blinkit");
     let count = blinkits.length;
 
@@ -8,15 +12,9 @@ function f() {
     }
 }
 
-function closeit() {
-    alert("closing.");
-    window.close();
-    close();
-}
-
 function blinker(element) {
     const interval = 97;
-    const probabilityWeight = 15;
+    const probabilityWeight = 20;
     const minIntervals = 3;
 
     let curIntervals = 0;
